@@ -77,8 +77,8 @@ python3.6 manage.py test
 
 ## Live Demo
 
-The web app can be accessed from the following link
-[click here]()
+The web app can be accessed from the following link.
+
 
 
 ## Technology used
