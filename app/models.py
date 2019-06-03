@@ -34,3 +34,21 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'{self.username}'
+
+class Post(db.Model):
+    __tablename__ = 'post'
+
+    id = db.Column(db.Integer,primary_key = True)
+    title = db.Column(db.String(255))
+    content = db.Column(db.String())
+    category = db.Column(db.String(255))
+    
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    post_id = db.relationship('Comment', backref = 'comments', lazy= "dynamic")
+       
+    def delete_post(self):
+           db.session.delete()
+           db.session.commit()
+
+    def __repr__(self):
+        return f'{self.title}'        
