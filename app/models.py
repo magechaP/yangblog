@@ -51,4 +51,17 @@ class Post(db.Model):
            db.session.commit()
 
     def __repr__(self):
-        return f'{self.title}'        
+        return f'{self.title}'
+
+class Comment(db.Model):
+    __tablename__='comments'
+
+    id = db.Column(db.Integer,primary_key=True)
+    comment_content = db.Column(db.String())
+    post_id = db.Column(db.Integer,db.ForeignKey('post.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+
+
+    def __repr__(self):
+        return f'{self.comment}'
+            
