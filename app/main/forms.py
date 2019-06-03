@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import Flaskform
 from wtforms import StringField, TextAreaField, SubmitField, SelectField
 
 class PostForm(FlaskForm):
