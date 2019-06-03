@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SECRET_KEY='01570936bd6b231dd1e14cd'
+    SECRET_KEY='yanglanti'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
